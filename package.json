@@ -6,10 +6,6 @@
   "repository": "https://github.com/sitepark/github-js-release-test",
   "author": "Holger Veltrup <veltrup@sitepark.com> (http://www.sitepark.com)",
   "main": "index.js",
-  "publishConfig": {
-    "snapshotRegistry": "http://develop.sitepark.com/nexus/repository/npm-internal",
-    "releaseRegistry": "https://registry.npmjs.org"
-  },
   "scripts": {
     "format:package-json": "echo 'format package.json'",
     "build": "tsc",
