@@ -10,6 +10,8 @@
   "author": "Holger Veltrup <veltrup@sitepark.com> (http://www.sitepark.com)",
   "main": "index.js",
   "scripts": {
+    "prepare": "husky",
+    "format": "prettier --write ./",
     "format:package-json": "echo 'format package.json'",
     "build": "tsc",
     "test": "vitest run --coverage",
@@ -25,6 +27,9 @@
     "@vitest/coverage-v8": "^4.0.17",
     "typescript": "^5.9.3",
     "vite": "^7.3.1",
-    "vitest": "^4.0.17"
+    "vitest": "^4.0.17",
+    "prettier": "^3.7.4",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7"
   }
 }
