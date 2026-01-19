@@ -14,10 +14,9 @@
     "build": "tsc",
     "test": "vitest run --coverage",
     "test:watch": "vitest",
-    "verify": "npm run verify:format",
+    "verify": "pnpm verify:format",
     "verify:format": "prettier --check \"**/*.{js,json,md}\"",
-    "package": "yarn build",
-    "publish": "echo 'publish'"
+    "package": "pnpm build"
   },
   "files": [
     "./dist"
