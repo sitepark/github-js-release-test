@@ -1,4 +1,4 @@
-name: Publish Package to npmjs
+name: (▶) Create Release
 
 on: workflow_dispatch
 
