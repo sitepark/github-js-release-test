@@ -3,25 +3,16 @@ name: (📡) Verify
 on:
   push:
     branches-ignore:
+      - "dependabot/**"
+  pull_request:
+    branches-ignore:
       - "main"
   workflow_dispatch:
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v6
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 10
-
-      # Setup .npmrc file to publish to npm
-      - uses: actions/setup-node@v6
-        with:
-          node-version: "24"
-          registry-url: "https://registry.npmjs.org"
-          cache: "pnpm"
-      - run: pnpm install
-      - run: pnpm verify
+  verify:
+    uses: sitepark/github-project-workflow/.github/workflows/pnpm-verify.yml@main
+    with:
+      nodeVersion: "24"
+    secrets:
+      CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}

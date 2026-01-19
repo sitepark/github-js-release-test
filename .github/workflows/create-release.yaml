@@ -1,0 +1,19 @@
+name: (▶) Create Release
+
+on: workflow_dispatch
+
+permissions:
+  id-token: write # Required for OIDC
+  contents: write
+
+jobs:
+  release:
+    uses: sitepark/github-project-workflow/.github/workflows/pnpm-release.yml@main
+    with:
+      botName: "sitepark-bot"
+      botEmail: "opensource@sitepark.com"
+      nodeVersion: "24"
+    secrets:
+      # Sitepark-BOT personal access token
+      BOT_PAT: ${{ secrets.BOT_PAT }}
+      CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
