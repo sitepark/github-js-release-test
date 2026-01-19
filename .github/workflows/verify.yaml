@@ -1,0 +1,27 @@
+name: (📡) Verify Package
+
+on:
+  push:
+    branches-ignore:
+      - "main"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      # Setup .npmrc file to publish to npm
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+          registry-url: "https://registry.npmjs.org"
+          cache: "pnpm"
+      - run: pnpm install
+      - run: pnpm verify
