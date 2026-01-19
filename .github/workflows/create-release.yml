@@ -2,9 +2,9 @@ name: (▶) Create Release
 
 on: workflow_dispatch
 
-permissions:
-  id-token: write # Required for OIDC
-  contents: write
+#permissions:
+#  id-token: write # Required for OIDC
+#  contents: write
 
 jobs:
   release:
