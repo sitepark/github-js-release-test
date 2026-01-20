@@ -25,4 +25,8 @@ export class Calculator {
   isEven(n: number): boolean {
     return n % 2 === 0;
   }
+
+  abs(n: number): boolean {
+    return Math.abs(n);
+  }
 }
