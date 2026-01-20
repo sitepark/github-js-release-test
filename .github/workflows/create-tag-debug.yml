@@ -25,5 +25,5 @@ jobs:
           git config --global user.email ${{ inputs.botEmail }}
           git config --global user.name ${{ inputs.botName }}
 
-          git -a 1.20.0 -m "Test Tag"
+          git -a 1.30.0 -m "Test Tag"
           git push --tags
