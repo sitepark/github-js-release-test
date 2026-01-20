@@ -25,5 +25,5 @@ jobs:
           git config --global user.email "opensource@sitepark.com"
           git config --global user.name "sitepark-bot"
 
-          git -a 1.30.0 -m "Test Tag"
+          git tag -a 1.30.0 -m "Test Tag"
           git push --tags
