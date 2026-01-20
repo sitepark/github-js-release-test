@@ -26,7 +26,7 @@ export class Calculator {
     return n % 2 === 0;
   }
 
-  // abs
+  // abs function
   abs(n: number): boolean {
     return Math.abs(n);
   }
