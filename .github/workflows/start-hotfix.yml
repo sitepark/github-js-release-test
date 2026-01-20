@@ -1,10 +1,10 @@
-name: (▶) Create Release
+name: (▶) Start Hotfix
 
 on: workflow_dispatch
 
 jobs:
   release:
-    uses: sitepark/github-project-workflow/.github/workflows/pnpm-release.yml@main
+    uses: sitepark/github-project-workflow/.github/workflows/pnpm-stat-hotfix.yml@main
     with:
       botName: "sitepark-bot"
       botEmail: "opensource@sitepark.com"
