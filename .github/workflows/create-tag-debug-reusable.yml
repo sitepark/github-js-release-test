@@ -1,0 +1,15 @@
+name: Create Tag debug (Use reusable workflow)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  release:
+    uses: sitepark/github-project-workflow/.github/workflows/create-tag-debug.yml@main
+    with:
+      botName: "sitepark-bot"
+      botEmail: "opensource@sitepark.com"
+    secrets:
+      # Sitepark-BOT personal access token
+      BOT_PAT: ${{ secrets.BOT_PAT }}
+      CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
