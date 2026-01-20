@@ -25,5 +25,17 @@ jobs:
           git config --global user.email "opensource@sitepark.com"
           git config --global user.name "sitepark-bot"
 
+          npm pkg set description="Test js releases with github actions: debug 1"
+          git add package.json
+          gtt commit -m "chore: debug 1"
+
           git tag -a 1.30.0 -m "Test Tag"
+
+          npm pkg set description="Test js releases with github actions: debug 2"
+          git add package.json
+          gtt commit -m "chore: debug 2"
+
+          git push
+
+
           git push --tags
