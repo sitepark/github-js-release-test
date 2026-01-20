@@ -3,13 +3,7 @@ name: (▶) Start Hotfix
 on: workflow_dispatch
 
 jobs:
-  release:
+  start-hotfix:
     uses: sitepark/github-project-workflow/.github/workflows/pnpm-start-hotfix.yml@main
     with:
-      botName: "sitepark-bot"
-      botEmail: "opensource@sitepark.com"
-      nodeVersion: "24"
-    secrets:
-      # Sitepark-BOT personal access token
-      BOT_PAT: ${{ secrets.BOT_PAT }}
-      CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+      ref: ${{ github.ref }}
