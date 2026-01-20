@@ -33,7 +33,7 @@ jobs:
 
           npm pkg set description="Test js releases with github actions: debug 2"
           git add package.json
-          gtt commit -m "chore: debug 2"
+          git commit -m "chore: debug 2"
 
           git push
 
