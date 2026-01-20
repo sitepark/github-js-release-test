@@ -22,8 +22,8 @@ jobs:
       - name: Create Tag
         run: |
           echo "create tag"
-          git config --global user.email ${{ inputs.botEmail }}
-          git config --global user.name ${{ inputs.botName }}
+          git config --global user.email "opensource@sitepark.com"
+          git config --global user.name "sitepark-bot"
 
           git -a 1.30.0 -m "Test Tag"
           git push --tags
