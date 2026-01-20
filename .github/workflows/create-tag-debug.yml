@@ -1,4 +1,4 @@
-name: Create Tag debug (Use reusable workflow)
+name: Create Tag debug
 
 on:
   workflow_dispatch:
