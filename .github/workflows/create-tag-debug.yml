@@ -27,7 +27,7 @@ jobs:
 
           npm pkg set description="Test js releases with github actions: debug 1"
           git add package.json
-          gtt commit -m "chore: debug 1"
+          git commit -m "chore: debug 1"
 
           git tag -a 1.30.0 -m "Test Tag"
 
