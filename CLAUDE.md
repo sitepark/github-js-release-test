@@ -18,7 +18,7 @@ This is a TypeScript library project designed to test JavaScript releases with G
 ### Build
 
 ```bash
-npm run build
+pnpm run build
 ```
 
 Compiles TypeScript to JavaScript using `tsc`. Output goes to `./dist` directory.
@@ -27,10 +27,10 @@ Compiles TypeScript to JavaScript using `tsc`. Output goes to `./dist` directory
 
 ```bash
 # Run all tests with coverage
-npm test
+pnpm test
 
 # Watch mode for development
-npm run test:watch
+pnpm run test:watch
 ```
 
 Tests use Vitest with the following coverage configuration:
@@ -44,10 +44,10 @@ Tests use Vitest with the following coverage configuration:
 
 ```bash
 # Run all verification checks
-npm run verify
+pnpm run verify
 
 # Check code formatting only
-npm run verify:format
+pnpm run verify:format
 ```
 
 Uses Prettier to check formatting of `**/*.{js,json,md}` files.
@@ -55,7 +55,7 @@ Uses Prettier to check formatting of `**/*.{js,json,md}` files.
 ### Package
 
 ```bash
-npm run package
+pnpm run package
 ```
 
 Creates a `dist` directory and test artifacts for publishing.
@@ -100,27 +100,27 @@ Version format follows semantic versioning with snapshot suffix (e.g., `2.3.0-SN
 ## Development Workflow
 
 1. Make changes to TypeScript files in `src/`
-2. Run tests in watch mode: `npm run test:watch`
-3. Verify formatting: `npm run verify:format`
-4. Build the project: `npm run build`
-5. Package for distribution: `npm run package`
+2. Run tests in watch mode: `pnpm run test:watch`
+3. Verify formatting: `pnpm run verify:format`
+4. Build the project: `pnpm run build`
+5. Package for distribution: `pnpm run package`
 
 ## Running Individual Tests
 
 To run a specific test file:
 
 ```bash
-npx vitest run src/Calculator.test.ts
+pnpm exec vitest run src/Calculator.test.ts
 ```
 
 To run tests matching a pattern:
 
 ```bash
-npx vitest run -t "pattern"
+pnpm exec vitest run -t "pattern"
 ```
 
 To run a single test in watch mode:
 
 ```bash
-npx vitest watch src/Calculator.test.ts
+pnpm exec vitest watch src/Calculator.test.ts
 ```
