@@ -13,12 +13,11 @@
     "prepare": "husky",
     "format": "prettier --write ./",
     "format:package-json": "echo 'format package.json'",
-    "build": "tsc",
     "test": "vitest run --coverage",
     "test:watch": "vitest",
     "verify": "pnpm verify:format",
     "verify:format": "prettier --check \"**/*.{js,json,md}\"",
-    "package": "pnpm build"
+    "build": "tsc"
   },
   "files": [
     "./dist"
